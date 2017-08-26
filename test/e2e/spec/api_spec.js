@@ -72,4 +72,9 @@ describe("API", function () {
         return expect(response).to.have.status(200);
     });
 
+    it("generates free bitcoins (deliberately broken!)", function () {
+        var response = chakram.get("/bitcoints?amount=many");
+        return expect(response).to.have.status(200);
+    });
+
 });
